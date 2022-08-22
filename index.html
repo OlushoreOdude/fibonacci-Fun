@@ -4,24 +4,124 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
+  <title>Fun With Fibonacci</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    /* Style the header */
+    .header {
+      background-color: #f1f1f1;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+    }
+    
+    /* Container for flexboxes */
+    .row {
+      display: -webkit-flex;
+      display: flex;
+    }
+    
+    /* Create three unequal columns that sits next to each other */
+    .column {
+      padding: 10px;
+      
+    }
+    
+    /* Left and right column */
+    .column.side {
+       -webkit-flex: 1;
+       -ms-flex: 1;
+       flex: 1;
+    }
+    
+    /* Middle column */
+    .column.middle {
+      -webkit-flex: 2;
+      -ms-flex: 2;
+      flex: 2;
+    }
+    
+    /* Style the footer */
+    .footer {
+      background-color: #f1f1f1;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media (max-width: 600px) {
+      .row {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+      }
+    }
+    </style>
 </head>
 <body>
-  <div>
 
-    <label for="var1"> var1</label>
-<input type="text" name="" id="var1" value="A">
+  <div class="header">
+    <h2>Fun With Fibonacci</h2>
+    <p>stories from the city</p>
+  </div>
+  <div class="topnav">
+    <a href="#">Home</a>
+    <a href="#">Events</a>
+    <a href="#">Honey</a>
+    <a href="#" style="float:right">More</a>
+  </div>
+  <div class="row">
+    <div class="column side" style="background-color:#aaa;">Column
+      
+      <h2> a bit about fibonacci</h2> 
+      <p>
 
-<label for="var2"> var2</label>
-<input type="text" name="" id="var2" value="B">
-<button id="demo2"> start fibanach </button>
-<button id="demo" > increase fibanach </button>
-<p id="fibStart"></p>
-<ul id="showFib"></ul>
+        "In mathematics," <b>Fibinacci numbers</b> , commonly denoted <span><i>F <sub>n </sub></i></span>, from a , <a href="/wiki/Integer_sequence" title="Integer sequence">sequence</a> the <b>Fibonacci sequence</b> , in which each number is the sum of the two preceding ones. The sequence commonly starts from 0 and 1, although some authors omit the initial terms and start the sequence from 1 and 1 or from 1 and 2.
+        Starting from 0 and 1, the next few values in the sequence are:
+        <dl><dd>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...</dd></dl>
+         
+        you can find out more about fibonnacci <a href="https://en.wikipedia.org/wiki/Fibonacci_number" title="fib wiki">here</a> 
+      </p>
+    </div>
+    <div class="column middle" style="background-color:#bbb;">Column
+      <div>
+  
+        <label for="var1"> var1</label>
+    <input type="text" name="" id="var1" value="A">
+    
+    <label for="var2"> var2</label>
+    <input type="text" name="" id="var2" value="B">
+    <button id="demo2"> start fibanach </button>
+    <button id="demo" > increase fibanach </button>
+    <p  id="fibStart"></p>
+    <ul class="scrollTextbox" id="showFib"></ul>
+    
+      </div>
+    
+    
+    </div>
+    <div class="column side" style="background-color:#ccc;">Column
+      
+      <h2> fibonacci and quantum computers</h2> 
+      <span class="dropcap-element-slot">B</span>
+      y firing a Fibonacci laser pulse at atoms inside a quantum computer, physicists have created a completely new, strange phase of matter that behaves as if it had two dimensions of time. 
 
+
+
+      you can find out more about fibonnacci and quantum computers <a href="https://www.msn.com/en-gb/money/technology/scientists-blast-atoms-with-fibonacci-laser-to-make-an-extra-dimension-of-time/ar-AA10JEv1?li=BBoPWjQ" title="tec msn">here</a> 
+    </div>
   </div>
 
+  
+  <div class="footer">
+    <p>Footer</p>
+  </div>
 <script type="module"  src="index.js"></script> 
 </body>
 </html>
